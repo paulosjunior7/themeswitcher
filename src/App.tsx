@@ -1,6 +1,7 @@
 import React, { useState , Dispatch, SetStateAction } from 'react';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 import Header from './components/header';
+import Card from './components/Cards';
 import GlobalStyles from './styles/global';
 import light from './styles/themes/light';
 import dark from './styles/themes/dark';
@@ -18,8 +19,10 @@ const App = () => {
     <div>
       <GlobalStyles />
       <Header toggleTheme={toggleTheme}/>
-      <div style={{ padding: '12px' }}>
-        <h1>Alter Theme</h1>
+      <div style={{ padding: '12px' , display: 'flex', justifyContent: 'center', alignItems: 'center'
+    }}>
+      <Card /> 
+
       </div>
     </div>
     </ThemeProvider>
